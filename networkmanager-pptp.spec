@@ -85,8 +85,8 @@ rm -rf %{buildroot}
 %defattr(-, root, root)
 %doc AUTHORS ChangeLog README
 %{_libdir}/NetworkManager/libnm-pptp-properties.so
-%{_libdir}/pppd/2.4.4/nm-pptp-pppd-plugin.so
-%{_libdir}/pppd/2.4.4/nm-pptp-pppd-plugin.la
+%{_libdir}/pppd/*/nm-pptp-pppd-plugin.so
+%{_libdir}/pppd/*/nm-pptp-pppd-plugin.la
 %{_libexecdir}/nm-pptp-auth-dialog
 %{_libexecdir}/nm-pptp-service
 %config(noreplace) %{_sysconfdir}/dbus-1/system.d/nm-pptp-service.conf
