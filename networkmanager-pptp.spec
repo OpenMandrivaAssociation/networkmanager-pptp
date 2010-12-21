@@ -35,6 +35,7 @@ BuildRequires: perl-XML-Parser
 BuildRequires: libtool intltool gettext
 BuildRequires: perl
 BuildRequires: gnome-common
+BuildRequires: ppp-devel
 Requires(post): desktop-file-utils
 Requires(postun): desktop-file-utils
 Requires: gtk2             >= %{gtk2_version}
