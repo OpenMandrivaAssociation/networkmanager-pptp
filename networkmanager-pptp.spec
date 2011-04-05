@@ -1,6 +1,6 @@
-%define nm_version          0.8
-%define dbus_version        1.1
-%define gtk2_version        2.10.0
+%define nm_version          0.8.3.999
+%define dbus_version        0.74
+%define gtk2_version        2.12
 %define shared_mime_version 0.16-3
 
 Summary: NetworkManager VPN integration for PPTP
@@ -21,28 +21,22 @@ Group: System/Base
 # - tar cvfz NetworkManager-pptp-%{version}.tar.gz NetworkManager-pptp-%{version}
 Source: http://download.gnome.org/sources/NetworkManager-pptp/0.8/NetworkManager-pptp-%version.tar.bz2
 BuildRequires: gtk2-devel >= %{gtk2_version}
-BuildRequires: dbus-devel >= %{dbus_version}
+BuildRequires: dbus-glib-devel >= %{dbus_version}
 BuildRequires: libnm-util-devel >= %{nm_version}
 BuildRequires: libnm-glib-devel >= %{nm_version}
 BuildRequires: libnm-glib-vpn-devel >= %{nm_version}
-BuildRequires: glib2-devel
+BuildRequires: gtk2-devel
 BuildRequires: libGConf2-devel
-BuildRequires: gnomeui2-devel
 BuildRequires: libgnome-keyring-devel
-BuildRequires: libglade2.0-devel
-BuildRequires: libpng-devel
 BuildRequires: perl-XML-Parser
 BuildRequires: libtool intltool gettext
 BuildRequires: perl
 BuildRequires: gnome-common
 BuildRequires: ppp-devel
-Requires(post): desktop-file-utils
-Requires(postun): desktop-file-utils
 Requires: gtk2             >= %{gtk2_version}
 Requires: dbus             >= %{dbus_version}
 Requires: NetworkManager   >= %{nm_version}
 Requires: shared-mime-info >= %{shared_mime_version}
-Requires: GConf2
 Requires: gnome-keyring
 Requires: pptp-linux
 BuildRoot: %{_tmppath}/%{name}-%{version}
@@ -92,11 +86,4 @@ rm -rf %{buildroot}
 %{_libexecdir}/nm-pptp-service
 %config(noreplace) %{_sysconfdir}/dbus-1/system.d/nm-pptp-service.conf
 %config(noreplace) %{_sysconfdir}/NetworkManager/VPN/nm-pptp-service.name
-%{_datadir}/gnome-vpn-properties/pptp/nm-pptp-dialog.glade
-# For now disabled in upstream
-#{_datadir}/applications/nm-pptp.desktop
-#{_datadir}/icons/hicolor/*/apps/*
-
-
-%changelog
-
+%_datadir/gnome-vpn-properties/pptp/nm-pptp-dialog.ui
