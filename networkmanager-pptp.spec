@@ -1,4 +1,4 @@
-%define nm_version          0.8.3.999
+%define nm_version          0.8.4
 %define dbus_version        0.74
 %define gtk2_version        2.12
 %define shared_mime_version 0.16-3
@@ -6,7 +6,7 @@
 Summary: NetworkManager VPN integration for PPTP
 Name: networkmanager-pptp
 Epoch:   1
-Version: 0.8.3.999
+Version: 0.8.4
 Release: %mkrel 1
 License: GPLv2+
 URL: http://www.gnome.org/projects/NetworkManager/
