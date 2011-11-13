@@ -1,4 +1,4 @@
-%define nm_version          0.9.2.0
+%define nm_version          0.8.6.0
 %define dbus_version        0.74
 %define gtk2_version        2.12
 %define shared_mime_version 0.16-3
@@ -6,7 +6,7 @@
 Summary: NetworkManager VPN integration for PPTP
 Name: networkmanager-pptp
 Epoch:   1
-Version: 0.9.2.0
+Version: 0.8.6.0
 Release: %mkrel 1
 License: GPLv2+
 URL: http://www.gnome.org/projects/NetworkManager/
@@ -19,7 +19,7 @@ Group: System/Base
 # - cd ..
 # - mv pptp NetworkManager-pptp-%{version}
 # - tar cvfz NetworkManager-pptp-%{version}.tar.gz NetworkManager-pptp-%{version}
-Source: http://download.gnome.org/sources/NetworkManager-pptp/0.9/NetworkManager-pptp-%{version}.tar.xz
+Source: http://download.gnome.org/sources/NetworkManager-pptp/0.8/NetworkManager-pptp-%{version}.tar.xz
 BuildRequires: gtk2-devel >= %{gtk2_version}
 BuildRequires: dbus-glib-devel >= %{dbus_version}
 BuildRequires: libnm-util-devel >= %{nm_version}
