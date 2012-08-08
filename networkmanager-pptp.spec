@@ -65,10 +65,9 @@ with NetworkManager and the GNOME desktop.
 %make
 
 %install
-rm -rf %{buildroot}
 %makeinstall_std
 
-rm -f %{buildroot}%{_libdir}/NetworkManager/*.la
+find %{buildroot} -type f -name "*.la" -exec rm -f {} ';'
 
 %find_lang NetworkManager-pptp
 
@@ -76,7 +75,6 @@ rm -f %{buildroot}%{_libdir}/NetworkManager/*.la
 %doc AUTHORS ChangeLog README
 %{_libdir}/NetworkManager/libnm-pptp-properties.so
 %{_libdir}/pppd/*/nm-pptp-pppd-plugin.so
-%{_libdir}/pppd/*/nm-pptp-pppd-plugin.la
 %{_libexecdir}/nm-pptp-auth-dialog
 %{_libexecdir}/nm-pptp-service
 %config(noreplace) %{_sysconfdir}/dbus-1/system.d/nm-pptp-service.conf
