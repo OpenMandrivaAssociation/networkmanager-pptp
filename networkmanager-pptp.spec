@@ -20,7 +20,7 @@ Release:	1
 License:	GPLv2+
 Group:		System/Base
 URL:		http://www.gnome.org/projects/NetworkManager/
-Source0:	http://download.gnome.org/sources/NetworkManager-pptp/0.8/NetworkManager-pptp-%{version}.tar.xz
+Source0:	http://download.gnome.org/sources/NetworkManager-pptp/NetworkManager-pptp-%{version}.tar.xz
 # ubuntu
 Patch0:	gtk_table_to_gtk_grid.patch
 
