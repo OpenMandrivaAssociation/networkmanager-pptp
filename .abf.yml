@@ -1,2 +1,4 @@
+removed_sources:
+  NetworkManager-pptp-0.9.8.0.tar.xz: a103deefee2c8821d7cecffc881328374f514db1
 sources:
-  "NetworkManager-pptp-0.9.8.0.tar.xz": a103deefee2c8821d7cecffc881328374f514db1
+  NetworkManager-pptp-0.9.8.2.tar.xz: a71ce190f76ef84fb8e1a4d34d6d580edc774e0a
