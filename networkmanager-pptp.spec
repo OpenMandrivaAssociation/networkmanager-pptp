@@ -20,6 +20,7 @@ BuildRequires:	ppp-devel
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gnome-keyring-1)
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(libnm-gtk) >= 1.0.5
 BuildRequires:	pkgconfig(libnm-util)
 BuildRequires:	pkgconfig(libnm-glib)
 BuildRequires:	pkgconfig(libnm-glib-vpn)
