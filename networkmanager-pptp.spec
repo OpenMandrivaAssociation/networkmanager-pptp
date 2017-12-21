@@ -59,8 +59,10 @@ with NetworkManager and the GNOME desktop.
 %doc AUTHORS ChangeLog README
 %config(noreplace) %{_sysconfdir}/dbus-1/system.d/nm-pptp-service.conf
 %config(noreplace) %{_sysconfdir}/NetworkManager/VPN/nm-pptp-service.name
-%{_libdir}/NetworkManager/libnm-pptp-properties.so
+%{_libdir}/NetworkManager/*.so
 %{_libdir}/pppd/*/nm-pptp-pppd-plugin.so
 %{_libexecdir}/nm-pptp-auth-dialog
 %{_libexecdir}/nm-pptp-service
 %{_datadir}/gnome-vpn-properties/pptp/nm-pptp-dialog.ui
+%{_prefix}/lib/NetworkManager/VPN/nm-pptp-service.name
+%{_datadir}/appdata/*.xml
