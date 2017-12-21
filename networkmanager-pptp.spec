@@ -4,7 +4,7 @@
 Summary:	NetworkManager VPN integration for PPTP
 Name:		networkmanager-pptp
 Epoch:		1
-Version:	1.0.6
+Version:	1.2.4
 Release:	1
 License:	GPLv2+
 Group:		System/Base
@@ -26,6 +26,7 @@ BuildRequires:	pkgconfig(libnm-glib)
 BuildRequires:	pkgconfig(libnm-glib-vpn)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(libsecret-unstable)
+BuildRequires:	pkgconfig(libnma)
 Requires:	dbus
 Requires:	gnome-keyring
 Requires:	gtk+3
@@ -58,9 +59,10 @@ with NetworkManager and the GNOME desktop.
 %doc AUTHORS ChangeLog README
 %config(noreplace) %{_sysconfdir}/dbus-1/system.d/nm-pptp-service.conf
 %config(noreplace) %{_sysconfdir}/NetworkManager/VPN/nm-pptp-service.name
-%{_libdir}/NetworkManager/libnm-pptp-properties.so
+%{_libdir}/NetworkManager/*.so
 %{_libdir}/pppd/*/nm-pptp-pppd-plugin.so
 %{_libexecdir}/nm-pptp-auth-dialog
 %{_libexecdir}/nm-pptp-service
 %{_datadir}/gnome-vpn-properties/pptp/nm-pptp-dialog.ui
-
+%{_prefix}/lib/NetworkManager/VPN/nm-pptp-service.name
+%{_datadir}/appdata/*.xml
