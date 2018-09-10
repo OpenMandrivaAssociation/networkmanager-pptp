@@ -4,7 +4,7 @@
 Summary:	NetworkManager VPN integration for PPTP
 Name:		networkmanager-pptp
 Epoch:		1
-Version:	1.2.4
+Version:	1.2.6
 Release:	1
 License:	GPLv2+
 Group:		System/Base
@@ -63,6 +63,5 @@ with NetworkManager and the GNOME desktop.
 %{_libdir}/pppd/*/nm-pptp-pppd-plugin.so
 %{_libexecdir}/nm-pptp-auth-dialog
 %{_libexecdir}/nm-pptp-service
-%{_datadir}/gnome-vpn-properties/pptp/nm-pptp-dialog.ui
 %{_prefix}/lib/NetworkManager/VPN/nm-pptp-service.name
 %{_datadir}/appdata/*.xml
