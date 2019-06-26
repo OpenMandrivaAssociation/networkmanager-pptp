@@ -4,7 +4,7 @@
 Summary:	NetworkManager VPN integration for PPTP
 Name:		networkmanager-pptp
 Epoch:		1
-Version:	1.2.6
+Version:	1.2.8
 Release:	2
 License:	GPLv2+
 Group:		System/Base
