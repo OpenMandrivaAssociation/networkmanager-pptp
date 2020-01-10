@@ -36,7 +36,7 @@ with NetworkManager and the GNOME desktop.
 
 %prep
 %setup -qn NetworkManager-pptp-%{version}
-%apply_patches
+%autopatch -p1
 
 %build
 %configure \
