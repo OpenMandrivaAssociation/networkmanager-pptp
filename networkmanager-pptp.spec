@@ -24,18 +24,25 @@ BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(libsecret-unstable)
 BuildRequires:	pkgconfig(libnma)
 Requires:	dbus
-Requires:	gtk+3
 Requires:	NetworkManager
 Requires:	pptp-linux
 Requires:	shared-mime-info
 
 %description
 This package contains software for integrating the PPTP VPN
-with NetworkManager and the GNOME desktop.
+with NetworkManager.
+
+%package gtk
+Summary:        GTK frontend for configuring PPTP connections with NetworkManager
+Group:          Tools
+Requires:       %{name} = %{EVRD}
+Supplements:    networkmanager-applet
+
+%description gtk
+GTK frontend for configuring PPTP connections with NetworkManager
 
 %prep
-%setup -qn NetworkManager-pptp-%{version}
-%autopatch -p1
+%autosetup -p1 -n NetworkManager-pptp-%{version}
 
 %build
 %configure \
@@ -54,9 +61,12 @@ with NetworkManager and the GNOME desktop.
 %files -f NetworkManager-pptp.lang
 %doc AUTHORS ChangeLog README
 %config(noreplace) %{_sysconfdir}/dbus-1/system.d/nm-pptp-service.conf
-%{_libdir}/NetworkManager/*.so
+%{_libdir}/NetworkManager/libnm-vpn-plugin-pptp.so
 %{_libdir}/pppd/*/nm-pptp-pppd-plugin.so
-%{_libexecdir}/nm-pptp-auth-dialog
 %{_libexecdir}/nm-pptp-service
 %{_prefix}/lib/NetworkManager/VPN/nm-pptp-service.name
 %{_datadir}/appdata/*.xml
+
+%files gtk
+%{_libdir}/NetworkManager/libnm-vpn-plugin-pptp-editor.so
+%{_libexecdir}/nm-pptp-auth-dialog
