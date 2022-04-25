@@ -61,12 +61,12 @@ GTK frontend for configuring PPTP connections with NetworkManager
 
 %files -f NetworkManager-pptp.lang
 %doc AUTHORS ChangeLog README
-%config(noreplace) %{_sysconfdir}/dbus-1/system.d/nm-pptp-service.conf
+#config(noreplace) #{_sysconfdir}/dbus-1/system.d/nm-pptp-service.conf
 %{_libdir}/NetworkManager/libnm-vpn-plugin-pptp.so
 %{_libdir}/pppd/*/nm-pptp-pppd-plugin.so
 %{_libexecdir}/nm-pptp-service
 %{_prefix}/lib/NetworkManager/VPN/nm-pptp-service.name
-%{_datadir}/appdata/*.xml
+#{_datadir}/appdata/*.xml
 
 %files gtk
 %{_libdir}/NetworkManager/libnm-vpn-plugin-pptp-editor.so
