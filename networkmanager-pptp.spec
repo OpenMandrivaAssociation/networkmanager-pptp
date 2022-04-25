@@ -3,8 +3,8 @@
 
 Summary:	NetworkManager VPN integration for PPTP
 Name:		networkmanager-pptp
-Version:	1.2.8
-Release:	4
+Version:	1.2.10
+Release:	1
 License:	GPLv2+
 Group:		System/Base
 Url:		http://www.gnome.org/projects/NetworkManager/
@@ -19,6 +19,7 @@ BuildRequires:	ppp-devel
 BuildRequires:	pkgconfig(dbus-1)
 BuildRequires:	pkgconfig(gnome-keyring-1)
 BuildRequires:	pkgconfig(gtk+-3.0)
+BuildRequires:	pkgconfig(gtk4)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(libsecret-unstable)
 BuildRequires:	pkgconfig(libnma)
@@ -48,6 +49,7 @@ GTK frontend for configuring PPTP connections with NetworkManager
 	--disable-static \
 	--disable-dependency-tracking \
 	--without-libnm-glib \
+	--with-gtk4 \
 	--enable-more-warnings=yes
 
 %make_build
