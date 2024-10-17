@@ -7,7 +7,7 @@ Version:	1.2.12
 Release:	2
 License:	GPLv2+
 Group:		System/Base
-Url:		http://www.gnome.org/projects/NetworkManager/
+Url:		https://www.gnome.org/projects/NetworkManager/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/NetworkManager-pptp/%{url_ver}/NetworkManager-pptp-%{version}.tar.xz
 
 BuildRequires:	gettext
