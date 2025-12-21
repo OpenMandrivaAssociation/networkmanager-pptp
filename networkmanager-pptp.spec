@@ -10,6 +10,11 @@ Group:		System/Base
 Url:		https://www.gnome.org/projects/NetworkManager/
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/NetworkManager-pptp/%{url_ver}/NetworkManager-pptp-%{version}.tar.xz
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	gettext
 BuildRequires:	libtool
 BuildRequires:	intltool
